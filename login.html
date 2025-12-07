@@ -1,5 +1,106 @@
-<input type="text" id="user" placeholder="Usuario">
-<input type="password" id="pass" placeholder="Contraseña">
-<button onclick="login()">Entrar</button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Turismo Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>🌴 Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="login-container">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">🔐</div>
+    <h2>Iniciar Sesión</h2>
+    <p style="color: #666; margin-top: 0.5rem;">Accede al panel de administración</p>
+  </div>
+  
+  <input 
+    type="text" 
+    id="user" 
+    placeholder="Usuario" 
+    style="width: 100%; padding: 1rem; margin: 0.5rem 0; border: 2px solid #4a7c2c; border-radius: 5px; font-size: 1rem;"
+  >
+  
+  <input 
+    type="password" 
+    id="pass" 
+    placeholder="Contraseña" 
+    style="width: 100%; padding: 1rem; margin: 0.5rem 0; border: 2px solid #4a7c2c; border-radius: 5px; font-size: 1rem;"
+  >
+  
+  <button 
+    onclick="login()" 
+    style="width: 100%; background: var(--verde-principal); color: white; padding: 1rem; border: none; border-radius: 25px; cursor: pointer; font-size: 1.1rem; margin-top: 1rem; transition: all 0.3s;"
+  >
+    Entrar
+  </button>
+  
+  <div style="margin-top: 2rem; padding: 1rem; background: #f0f8f0; border-radius: 5px; border-left: 4px solid var(--verde-principal);">
+    <p style="font-size: 0.9rem; color: #666; margin: 0;">
+      <strong>Credenciales de prueba:</strong><br>
+      Usuario: <strong>admin</strong><br>
+      Contraseña: <strong>123</strong>
+    </p>
+  </div>
+  
+  <div style="margin-top: 1rem; text-align: center;">
+    <a href="index.html" style="color: var(--verde-principal); text-decoration: none; font-size: 0.9rem;">
+      ← Volver al inicio
+    </a>
+  </div>
+</div>
+
+<footer class="footer" style="margin-top: 4rem;">
+  <div>
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Email: info@turismococle.com</p>
+    <p>Tel: +507 6000-0000</p>
+    <a href="contacto.html">Formulario</a>
+  </div>
+  <div>
+    <h4>Redes Sociales</h4>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 <script src="js/login.js"></script>
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>

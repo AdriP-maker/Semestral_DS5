@@ -1,5 +1,306 @@
-<h2>Juego Turístico</h2>
-<p>Puntaje: <span id="puntaje">0</span></p>
-<button onclick="sumar()">Explorar</button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego Aventura en Coclé - Turismo Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 2px;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: var(--verde-principal);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    
+    .cell {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #f5f5dc, #ffffff);
+      border: 2px solid var(--verde-claro);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: var(--marron);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .cell:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .cell-number {
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-size: 0.6rem;
+      color: var(--verde-principal);
+    }
+    
+    .escalera {
+      background: linear-gradient(135deg, #90EE90, #98FB98) !important;
+      border-color: var(--verde-principal);
+    }
+    
+    .serpiente {
+      background: linear-gradient(135deg, #8B4513, #A0522D) !important;
+      border-color: var(--marron);
+      color: white !important;
+    }
+    
+    .player {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #FFD700, #FFA500);
+      border: 3px solid var(--verde-principal);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      animation: bounce 0.5s;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .dice {
+      width: 80px;
+      height: 80px;
+      background: white;
+      border: 3px solid var(--verde-principal);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      margin: 0 auto;
+    }
+    
+    .dice:hover {
+      transform: scale(1.1) rotate(5deg);
+      background: var(--crema);
+    }
+    
+    .dice:active {
+      transform: scale(0.95);
+    }
+    
+    @keyframes roll {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .rolling {
+      animation: roll 0.5s ease-in-out;
+    }
+    
+    .info-panel {
+      display: flex;
+      justify-content: space-around;
+      margin: 2rem auto;
+      max-width: 600px;
+      gap: 1rem;
+    }
+    
+    .info-box {
+      flex: 1;
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 3px solid var(--verde-principal);
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .info-box h3 {
+      color: var(--verde-principal);
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .info-box p {
+      color: var(--marron);
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .message {
+      max-width: 600px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background: var(--crema);
+      border-left: 4px solid var(--verde-principal);
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      color: var(--marron);
+    }
+    
+    .legend {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .legend-box {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      border: 2px solid var(--verde-principal);
+    }
+
+    @media (max-width: 768px) {
+      .game-board {
+        max-width: 95%;
+      }
+      
+      .info-panel {
+        flex-direction: column;
+        max-width: 95%;
+      }
+      
+      .dice {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>🌴 Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="contenido">
+  <h2>🎲 Aventura Turística en Coclé</h2>
+  <p style="text-align: center; font-size: 1.1rem; color: #666;">
+    ¡Recorre los destinos turísticos de Coclé! Las escaleras te llevan a nuevas aventuras, 
+    pero cuidado con las serpientes que te harán retroceder. ¡Sé el primero en llegar a la casilla 100!
+  </p>
+</section>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-box" style="background: linear-gradient(135deg, #90EE90, #98FB98);"></div>
+    <span>🪜 Escaleras (Aventuras)</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-box" style="background: linear-gradient(135deg, #8B4513, #A0522D);"></div>
+    <span>🐍 Serpientes (Obstáculos)</span>
+  </div>
+</div>
+
+<div class="info-panel">
+  <div class="info-box">
+    <h3>📍 Posición Actual</h3>
+    <p id="posicionActual">0</p>
+  </div>
+  <div class="info-box">
+    <h3>🎲 Último Dado</h3>
+    <p id="ultimoDado">-</p>
+  </div>
+  <div class="info-box">
+    <h3>🏃 Movimientos</h3>
+    <p id="movimientos">0</p>
+  </div>
+</div>
+
+<div id="mensaje" class="message" style="display: none;"></div>
+
+<div style="text-align: center; margin: 2rem auto;">
+  <div id="dado" class="dice" onclick="lanzarDado()">🎲</div>
+  <p style="margin-top: 1rem; font-size: 1.1rem; color: var(--verde-principal); font-weight: bold;">
+    Haz clic en el dado para jugar
+  </p>
+</div>
+
+<div class="game-board" id="tablero"></div>
+
+<div style="text-align: center; margin: 2rem auto;">
+  <button onclick="reiniciarJuego()" style="background: var(--marron); color: white; padding: 1rem 3rem; border: none; border-radius: 25px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s;">
+    🔄 Reiniciar Juego
+  </button>
+</div>
+
+<footer class="footer">
+  <div>
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Email: info@turismococle.com</p>
+    <p>Tel: +507 6000-0000</p>
+    <a href="contacto.html">Formulario</a>
+  </div>
+  <div>
+    <h4>Redes Sociales</h4>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 <script src="js/juego.js"></script>
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>
