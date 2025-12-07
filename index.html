@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Turismo de Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- MODAL BIENVENIDA -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <h2>Bienvenido a Turismo Coclé</h2>
+    <p>Descubre los mejores destinos turísticos</p>
+    <button onclick="cerrarModal()">Entrar</button>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- SLIDER -->
+<section class="slider">
+  <img id="slide" src="img/slide1.jpg">
+</section>
+
+<section class="contenido">
+  <h2>Turismo en Coclé</h2>
+  <p>Coclé es una de las provincias más visitadas de Panamá...</p>
+</section>
+
+<footer class="footer">
+  <div>Enlaces</div>
+  <div>Contacto</div>
+  <div>Redes</div>
+  <div>Mapa</div>
+</footer>
+
+<script src="js/slider.js"></script>
+<script src="js/chatbot.js"></script>
+<script>
+function cerrarModal() {
+  document.getElementById("modal").style.display="none";
+}
+</script>
+</body>
+</html>
