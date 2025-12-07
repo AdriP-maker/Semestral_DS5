@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Turismo de Coclé</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo de Coclé - Descubre Panamá</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -10,21 +11,23 @@
 <!-- MODAL BIENVENIDA -->
 <div id="modal" class="modal">
   <div class="modal-contenido">
-    <h2>Bienvenido a Turismo Coclé</h2>
-    <p>Descubre los mejores destinos turísticos</p>
-    <button onclick="cerrarModal()">Entrar</button>
+    <h2>🌿 Bienvenido a Turismo Coclé 🌿</h2>
+    <p>Descubre los mejores destinos turísticos de la provincia más hermosa de Panamá</p>
+    <p style="font-size: 0.9rem; margin-top: 1rem; color: #666;">Playas paradisíacas • Montañas místicas • Historia ancestral</p>
+    <button onclick="cerrarModal()">Explorar Ahora</button>
   </div>
 </div>
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <h1>Turismo Coclé</h1>
+  <h1>🌴 Turismo Coclé</h1>
   <nav id="menu">
     <a href="index.html">Inicio</a>
     <a href="sitios.html">Sitios</a>
     <a href="paquetes.html">Paquetes</a>
     <a href="juego.html">Juego</a>
     <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
     <a href="login.html">Login</a>
   </nav>
   <div class="hamburguesa" onclick="toggleMenu()">☰</div>
@@ -32,27 +35,119 @@
 
 <!-- SLIDER -->
 <section class="slider">
-  <img id="slide" src="img/slide1.jpg">
+  <img id="slide" src="img/slide1.jpg" alt="Turismo Coclé">
 </section>
 
+<!-- CONTENIDO PRINCIPAL -->
 <section class="contenido">
   <h2>Turismo en Coclé</h2>
-  <p>Coclé es una de las provincias más visitadas de Panamá...</p>
+  <p>
+    Coclé es una de las provincias más visitadas de Panamá, conocida por su extraordinaria diversidad natural y riqueza cultural. 
+    Ubicada en el corazón del país, esta región ofrece experiencias únicas que van desde playas de arena blanca en el Pacífico 
+    hasta montañas cubiertas de bosques nubosos en el interior.
+  </p>
+  <p style="margin-top: 1rem;">
+    <strong>El Valle de Antón</strong>, ubicado en el cráter de un volcán extinto, es uno de los destinos más emblemáticos. 
+    Sus cascadas cristalinas, pozos termales naturales y el famoso mercado artesanal atraen a miles de visitantes cada año. 
+    El clima fresco de montaña lo convierte en el escape perfecto del calor tropical.
+  </p>
+  <p style="margin-top: 1rem;">
+    Las costas de Coclé albergan algunas de las playas más hermosas del país, como <strong>Playa Blanca y Playa Farallón</strong>, 
+    donde las aguas turquesas y la arena dorada invitan a días de relajación, deportes acuáticos y espectaculares puestas de sol. 
+    Los amantes del buceo y snorkel encontrarán aquí arrecifes de coral llenos de vida marina.
+  </p>
+  <p style="margin-top: 1rem;">
+    La historia precolombina cobra vida en el <strong>Parque Arqueológico El Caño</strong>, donde se pueden explorar antiguas 
+    tumbas, petroglifos y estructuras que revelan la complejidad de las civilizaciones que habitaron estas tierras hace siglos. 
+    Este sitio es considerado uno de los hallazgos arqueológicos más importantes de Centroamérica.
+  </p>
+  <p style="margin-top: 1rem;">
+    Para los aventureros, el <strong>Chorro del Macho</strong> ofrece canopy sobre el bosque tropical y una impresionante cascada 
+    de 35 metros. Los pozos termales de propiedades terapéuticas, las rutas de senderismo entre la biodiversidad, y la 
+    observación de aves exóticas complementan la oferta de ecoturismo.
+  </p>
+  <p style="margin-top: 1rem; padding: 1rem; background: #f0f8f0; border-left: 4px solid var(--verde-principal); border-radius: 5px;">
+    <strong>🌟 ¿Por qué elegir Coclé?</strong><br>
+    Coclé combina naturaleza virgen, aventura, historia y cultura en un solo destino. Ya sea que busques relajarte en una playa 
+    paradisíaca, explorar montañas místicas, sumergirte en la historia ancestral o disfrutar de la gastronomía local, 
+    esta provincia tiene algo especial para cada viajero. ¡Descubre por qué Coclé es el corazón turístico de Panamá!
+  </p>
 </section>
 
+<!-- SECCIÓN DESTACADOS -->
+<section class="contenido" style="background: linear-gradient(135deg, #f5f5dc, #e8f5e9);">
+  <h2 style="text-align: center; margin-bottom: 2rem;">✨ Experiencias Destacadas</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+    <div style="text-align: center; padding: 1.5rem;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏖️</div>
+      <h3 style="color: var(--verde-principal);">Playas Vírgenes</h3>
+      <p>Arena blanca y aguas cristalinas te esperan en nuestras costas del Pacífico</p>
+    </div>
+    <div style="text-align: center; padding: 1.5rem;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏔️</div>
+      <h3 style="color: var(--verde-principal);">Montañas Místicas</h3>
+      <p>Explora el valle en el cráter de un volcán con clima fresco y naturaleza exuberante</p>
+    </div>
+    <div style="text-align: center; padding: 1.5rem;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🗿</div>
+      <h3 style="color: var(--verde-principal);">Historia Viva</h3>
+      <p>Descubre sitios arqueológicos precolombinos con tumbas y petroglifos ancestrales</p>
+    </div>
+    <div style="text-align: center; padding: 1.5rem;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌊</div>
+      <h3 style="color: var(--verde-principal);">Aventura Extrema</h3>
+      <p>Canopy, cascadas y deportes acuáticos para los amantes de la adrenalina</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <div>Enlaces</div>
-  <div>Contacto</div>
-  <div>Redes</div>
-  <div>Mapa</div>
+  <div>
+    <h4>Enlaces Rápidos</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios Turísticos</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego Interactivo</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>📧 Email: info@turismococle.com</p>
+    <p>📞 Teléfono: +507 6000-0000</p>
+    <p>📍 Penonomé, Coclé, Panamá</p>
+    <a href="contacto.html">Formulario de Contacto</a>
+  </div>
+  <div>
+    <h4>Síguenos</h4>
+    <a href="#" onclick="alert('Visítanos en Facebook'); return false;">Facebook</a>
+    <a href="#" onclick="alert('Síguenos en Instagram'); return false;">Instagram</a>
+    <a href="#" onclick="alert('Síguenos en Twitter'); return false;">Twitter</a>
+    <a href="#" onclick="alert('Suscríbete a nuestro canal de YouTube'); return false;">YouTube</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+    <p>Centroamérica</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Turismo Coclé</p>
+  </div>
 </footer>
 
 <script src="js/slider.js"></script>
 <script src="js/chatbot.js"></script>
 <script>
 function cerrarModal() {
-  document.getElementById("modal").style.display="none";
+  document.getElementById("modal").style.display = "none";
 }
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+// Cerrar modal automáticamente después de 3 segundos (opcional)
+// setTimeout(cerrarModal, 3000);
 </script>
+
 </body>
 </html>

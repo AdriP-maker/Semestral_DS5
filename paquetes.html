@@ -1,14 +1,133 @@
-<h2>Paquetes Turísticos</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes Turísticos - Turismo Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
 
-<div class="paquete">
-  <h3>Playa Blanca</h3>
-  <p>$100</p>
-  <button onclick="agregarCarrito(100)">Comprar</button>
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="contenido">
+  <h2>Paquetes Turísticos</h2>
+  <p>Descubre nuestros paquetes exclusivos diseñados para que disfrutes al máximo de las maravillas de Coclé. Todos incluyen guía turístico, transporte y más.</p>
+</section>
+
+<div class="paquetes-container">
+  <div class="paquete">
+    <div>
+      <h3>🏖️ Playa Blanca</h3>
+      <p style="color: #666; margin: 0.5rem 0;">Día completo en la playa más hermosa de Coclé. Incluye almuerzo, equipo de snorkel y transporte.</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="font-size: 2rem; color: var(--marron); font-weight: bold; margin: 0;">$100</p>
+      <button onclick="agregarCarrito(100, 'Playa Blanca')">Comprar</button>
+    </div>
+  </div>
+
+  <div class="paquete">
+    <div>
+      <h3>🏔️ El Valle de Antón</h3>
+      <p style="color: #666; margin: 0.5rem 0;">Aventura en el valle volcánico. Visita cascadas, pozos termales y el mercado artesanal. Almuerzo incluido.</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="font-size: 2rem; color: var(--marron); font-weight: bold; margin: 0;">$150</p>
+      <button onclick="agregarCarrito(150, 'El Valle de Antón')">Comprar</button>
+    </div>
+  </div>
+
+  <div class="paquete">
+    <div>
+      <h3>🗿 Tour Arqueológico</h3>
+      <p style="color: #666; margin: 0.5rem 0;">Explora el Parque Arqueológico El Caño y descubre la historia precolombina. Incluye guía especializado.</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="font-size: 2rem; color: var(--marron); font-weight: bold; margin: 0;">$120</p>
+      <button onclick="agregarCarrito(120, 'Tour Arqueológico')">Comprar</button>
+    </div>
+  </div>
+
+  <div class="paquete">
+    <div>
+      <h3>💦 Chorro del Macho</h3>
+      <p style="color: #666; margin: 0.5rem 0;">Aventura extrema con canopy y visita a la cascada. Ideal para los amantes de la adrenalina.</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="font-size: 2rem; color: var(--marron); font-weight: bold; margin: 0;">$130</p>
+      <button onclick="agregarCarrito(130, 'Chorro del Macho')">Comprar</button>
+    </div>
+  </div>
+
+  <div class="paquete">
+    <div>
+      <h3>🌅 Tour Completo Coclé</h3>
+      <p style="color: #666; margin: 0.5rem 0;">3 días / 2 noches visitando todos los principales atractivos de Coclé. Hospedaje y alimentación incluidos.</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="font-size: 2rem; color: var(--marron); font-weight: bold; margin: 0;">$350</p>
+      <button onclick="agregarCarrito(350, 'Tour Completo Coclé')">Comprar</button>
+    </div>
+  </div>
+
+  <div class="carrito">
+    <h3 style="margin-bottom: 1rem;">🛒 Carrito de Compras</h3>
+    <div id="itemsCarrito" style="margin-bottom: 1rem; text-align: left;"></div>
+    <p style="font-size: 2rem; margin: 1rem 0;">Total: $<span id="total">0</span></p>
+    <button onclick="finalizar()" style="background: var(--blanco); color: var(--marron);">Finalizar Compra</button>
+    <button onclick="vaciarCarrito()" style="background: rgba(255,255,255,0.3); color: var(--blanco); margin-left: 1rem;">Vaciar Carrito</button>
+  </div>
 </div>
 
-<div class="carrito">
-  <p>Total: $<span id="total">0</span></p>
-  <button onclick="finalizar()">Finalizar Compra</button>
-</div>
+<footer class="footer">
+  <div>
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Email: info@turismococle.com</p>
+    <p>Tel: +507 6000-0000</p>
+    <a href="contacto.html">Formulario</a>
+  </div>
+  <div>
+    <h4>Redes Sociales</h4>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 <script src="js/carrito.js"></script>
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>

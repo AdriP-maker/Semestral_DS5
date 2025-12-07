@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitios Turísticos - Turismo Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="contenido">
+  <h2>Destinos Turísticos de Coclé</h2>
+  <p>Descubre los lugares más hermosos de la provincia de Coclé, desde playas paradisíacas hasta majestuosas montañas.</p>
+</section>
+
+<div class="sitios-grid">
+  <div class="sitio-card">
+    <img src="img/playa-blanca.jpg" alt="Playa Blanca" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%234a7c2c%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPlaya Blanca%3C/text%3E%3C/svg%3E'">
+    <div class="sitio-info">
+      <h3>Playa Blanca</h3>
+      <p>Hermosa playa de arena blanca y aguas cristalinas. Ideal para nadar, bucear y relajarse bajo el sol tropical. Un paraíso costero perfecto para familias.</p>
+    </div>
+  </div>
+
+  <div class="sitio-card">
+    <img src="img/el-valle.jpg" alt="El Valle de Antón" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%232d5016%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22%3EEl Valle de Antón%3C/text%3E%3C/svg%3E'">
+    <div class="sitio-info">
+      <h3>El Valle de Antón</h3>
+      <p>Valle ubicado en el cráter de un volcán extinto. Famoso por su clima fresco, cascadas, mercado artesanal y rica biodiversidad. Un destino de montaña imperdible.</p>
+    </div>
+  </div>
+
+  <div class="sitio-card">
+    <img src="img/parque-omar.jpg" alt="Parque Arqueológico El Caño" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%236b4423%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22%3EParque Arqueológico%3C/text%3E%3C/svg%3E'">
+    <div class="sitio-info">
+      <h3>Parque Arqueológico El Caño</h3>
+      <p>Sitio arqueológico precolombino con tumbas y petroglifos antiguos. Descubre la historia de las culturas indígenas que habitaron estas tierras hace siglos.</p>
+    </div>
+  </div>
+
+  <div class="sitio-card">
+    <img src="img/chorro-macho.jpg" alt="Chorro del Macho" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%234a7c2c%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22%3EChorro del Macho%3C/text%3E%3C/svg%3E'">
+    <div class="sitio-info">
+      <h3>Chorro del Macho</h3>
+      <p>Impresionante cascada de 35 metros de altura rodeada de vegetación tropical. Disfruta de canopy, senderismo y la refrescante piscina natural en su base.</p>
+    </div>
+  </div>
+
+  <div class="sitio-card">
+    <img src="img/playa-farallon.jpg" alt="Playa Farallón" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%232d5016%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPlaya Farallón%3C/text%3E%3C/svg%3E'">
+    <div class="sitio-info">
+      <h3>Playa Farallón</h3>
+      <p>Conocida como Playa Blanca, es una de las playas más exclusivas de Panamá. Arena dorada, resorts de lujo y deportes acuáticos para todos los gustos.</p>
+    </div>
+  </div>
+
+  <div class="sitio-card">
+    <img src="img/pozos-termales.jpg" alt="Pozos Termales" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%236b4423%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2224%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPozos Termales%3C/text%3E%3C/svg%3E'">
+    <div class="sitio-info">
+      <h3>Pozos Termales</h3>
+      <p>Aguas termales naturales con propiedades terapéuticas ubicadas en El Valle. Relájate en estas piscinas naturales mientras disfrutas del paisaje montañoso.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div>
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Email: info@turismococle.com</p>
+    <p>Tel: +507 6000-0000</p>
+    <a href="contacto.html">Formulario</a>
+  </div>
+  <div>
+    <h4>Redes Sociales</h4>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>
