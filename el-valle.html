@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Valle de Antón - Turismo Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    .detalle-hero {
+      background: linear-gradient(135deg, #2d5016 0%, #1a3010 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .detalle-hero h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .detalle-hero p {
+      font-size: 1.3em;
+      margin: 20px 0;
+    }
+    .detalle-contenido {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .seccion-info {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .seccion-info h2 {
+      color: #2d5016;
+      border-bottom: 3px solid #2d5016;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .actividades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .actividad-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #2d5016;
+    }
+    .actividad-card h3 {
+      color: #2d5016;
+      margin-top: 0;
+    }
+    .info-practica {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .boton-volver {
+      display: inline-block;
+      background: #2d5016;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 20px 0;
+      transition: background 0.3s;
+    }
+    .boton-volver:hover {
+      background: #1a3010;
+    }
+    .atractivos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .atractivo-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid #2d5016;
+    }
+    .atractivo-card h3 {
+      color: #2d5016;
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="detalle-hero">
+  <h1>🏔️ El Valle de Antón</h1>
+  <p>Un cráter volcánico lleno de vida y naturaleza</p>
+</div>
+
+<div class="detalle-contenido">
+  <a href="sitios.html" class="boton-volver">← Volver a Sitios</a>
+
+  <div class="seccion-info">
+    <h2>Descripción</h2>
+    <p>El Valle de Antón es uno de los destinos más fascinantes de Panamá. Este pueblo está ubicado dentro del cráter de un volcán extinto, uno de los pocos crateres volcánicos habitados del mundo. A unos 600 metros sobre el nivel del mar, El Valle ofrece un clima fresco y agradable que contrasta con el calor de las costas panameñas.</p>
+    <p>Rodeado de montañas verdes y envuelto en una atmósfera de tranquilidad, este pintoresco pueblo es el destino perfecto para los amantes de la naturaleza, la aventura y la cultura. Sus calles empedradas, mercado artesanal, y la calidez de su gente hacen de El Valle un lugar mágico para visitar.</p>
+    <p>La biodiversidad de la zona es impresionante, con especies endémicas como la famosa Rana Dorada de Panamá, bosques nubosos, cascadas espectaculares y una variedad de flora y fauna que atraen a científicos y turistas de todo el mundo.</p>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Principales Atractivos</h2>
+    <div class="atractivos-grid">
+      <div class="atractivo-card">
+        <h3>🐸 El Níspero (Zoológico)</h3>
+        <p>Centro de conservación donde podrás ver la famosa Rana Dorada, tapires, perezosos y otras especies en peligro. Comprometido con la preservación de la fauna panameña.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>💧 La India Dormida</h3>
+        <p>Montaña con forma de mujer acostada. Trail de senderismo de 2-3 horas con vistas panorámicas espectaculares del valle y sus alrededores.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>🌊 Chorros de las Mozas</h3>
+        <p>Hermosas cascadas de aguas cristalinas perfectas para nadar. Piscinas naturales rodeadas de vegetación tropical exuberante.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>🪨 Los Árboles Cuadrados</h3>
+        <p>Curiosidad botánica única en el mundo. Estos árboles tienen troncos de forma cuadrada, un fenómeno natural que desconcierta a científicos.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>🏛️ Mercado Artesanal</h3>
+        <p>Mercado dominical con artesanías locales, frutas, verduras orgánicas, flores y productos tradicionales. Perfecto para souvenirs auténticos.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>🌺 Jardín de Orquídeas</h3>
+        <p>Colección impresionante de orquídeas nativas y exóticas. Más de 100 especies en exhibición en un ambiente natural.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>🪨 Piedra Pintada</h3>
+        <p>Petroglifos precolombinos tallados en roca volcánica. Evidencia de las culturas indígenas que habitaron el valle hace siglos.</p>
+      </div>
+      <div class="atractivo-card">
+        <h3>♨️ Pozos Termales</h3>
+        <p>Aguas termales naturales con propiedades terapéuticas. Ricas en minerales, ideales para relajación y tratamientos de piel.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Actividades Disponibles</h2>
+    <div class="actividades-grid">
+      <div class="actividad-card">
+        <h3>🥾 Senderismo</h3>
+        <p>Múltiples trails de diferentes niveles. Desde caminatas suaves hasta ascensos desafiantes con vistas espectaculares.</p>
+      </div>
+      <div class="actividad-card">
+        <h3>🚴 Ciclismo de Montaña</h3>
+        <p>Rutas por caminos rurales y senderos. Alquiler de bicicletas disponible en el pueblo.</p>
+      </div>
+      <div class="actividad-card">
+        <h3>🪂 Canopy</h3>
+        <p>Tirolesas a través del bosque nuboso. Experimenta la adrenalina mientras admiras la naturaleza desde las alturas.</p>
+      </div>
+      <div class="actividad-card">
+        <h3>🐦 Observación de Aves</h3>
+        <p>Más de 300 especies de aves. Guías especializados disponibles para tours de birdwatching.</p>
+      </div>
+      <div class="actividad-card">
+        <h3>🏇 Cabalgatas</h3>
+        <p>Paseos a caballo por montañas y valles. Tours de 1-4 horas con guías experimentados.</p>
+      </div>
+      <div class="actividad-card">
+        <h3>🧘 Yoga y Retiros</h3>
+        <p>El ambiente tranquilo y clima fresco hacen de El Valle el lugar perfecto para retiros espirituales y wellness.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Información Práctica</h2>
+    <div class="info-practica">
+      <p><strong>📍 Ubicación:</strong> A 125 km al oeste de Ciudad de Panamá, en la provincia de Coclé</p>
+      <p><strong>🚗 Cómo llegar:</strong> Por la Carretera Interamericana hasta el desvío de San Carlos, luego 28 km de carretera escénica (2 horas desde la capital)</p>
+      <p><strong>🌡️ Clima:</strong> Temperatura promedio de 18-24°C. Clima fresco de montaña, puede ser frío por las noches</p>
+      <p><strong>⏰ Mejor época:</strong> Todo el año, pero enero-abril (temporada seca) es ideal. La temporada lluviosa (mayo-diciembre) tiene paisajes más verdes</p>
+      <p><strong>🏨 Alojamiento:</strong> Amplia variedad: hoteles boutique, cabañas, hostales y casas de alquiler</p>
+      <p><strong>💵 Presupuesto:</strong> Destino accesible. Entradas a atracciones desde $3-5. Comidas desde $5-15</p>
+      <p><strong>🍽️ Gastronomía:</strong> Restaurantes con comida típica, internacional, orgánica y vegetariana</p>
+    </div>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Consejos para tu Visita</h2>
+    <ul style="line-height: 1.8;">
+      <li>🧥 Lleva ropa abrigada (suéter o chaqueta) especialmente para las mañanas y noches</li>
+      <li>👟 Zapatos cómodos para caminar son esenciales</li>
+      <li>☔ Trae impermeable o paraguas, puede llover en cualquier momento</li>
+      <li>📸 Cámara con buena batería - hay muchas oportunidades fotográficas</li>
+      <li>💵 Lleva efectivo, no todos los lugares aceptan tarjetas</li>
+      <li>🗓️ Visita en domingo para disfrutar del mercado artesanal</li>
+      <li>⏰ Dedica al menos 2-3 días para explorar bien todos los atractivos</li>
+      <li>🚗 Considera alquilar un auto o contratar tours si quieres visitar múltiples sitios</li>
+      <li>🥾 Lleva repelente de insectos para las caminatas</li>
+      <li>📱 La señal de celular puede ser limitada en algunas áreas</li>
+    </ul>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Datos Curiosos</h2>
+    <p>🌋 <strong>Cráter Habitado:</strong> El Valle es uno de los pocos cráteres volcánicos habitados del mundo.<br><br>
+    🐸 <strong>Rana Dorada:</strong> Es el hogar de la Rana Dorada de Panamá, símbolo nacional y especie críticamente amenazada.<br><br>
+    🌳 <strong>Árboles Únicos:</strong> Los árboles cuadrados son un fenómeno que no se encuentra en ningún otro lugar del planeta.<br><br>
+    🌡️ <strong>Microclima:</strong> Disfruta de un microclima único que permite el crecimiento de especies que normalmente no se encuentran a esta altitud.<br><br>
+    🏛️ <strong>Historia:</strong> Era un lugar sagrado para las culturas precolombinas, como lo demuestran los petroglifos encontrados.</p>
+  </div>
+
+  <a href="sitios.html" class="boton-volver">← Volver a Sitios</a>
+</div>
+
+<footer class="footer">
+  <div>
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Email: info@turismococle.com</p>
+    <p>Tel: +507 6000-0000</p>
+    <a href="contacto.html">Formulario</a>
+  </div>
+  <div>
+    <h4>Redes Sociales</h4>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

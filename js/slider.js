@@ -1,4 +1,4 @@
-let imagenes = ["img/slide1.jpg", "img/slide2.jpg", "img/slide3.jpg"];
+let imagenes = ["img/slide1.jpg", "img/slide2.jpeg", "img/slide3.jpeg"];
 let i = 0;
 
 setInterval(() => {

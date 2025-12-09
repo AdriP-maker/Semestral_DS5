@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parque Arqueológico El Caño - Turismo Coclé</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    .detalle-hero {
+      background: linear-gradient(135deg, #6b4423 0%, #4a2f18 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .detalle-hero h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .detalle-hero p {
+      font-size: 1.3em;
+      margin: 20px 0;
+    }
+    .detalle-contenido {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .seccion-info {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .seccion-info h2 {
+      color: #6b4423;
+      border-bottom: 3px solid #6b4423;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .hallazgos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .hallazgo-card {
+      background: linear-gradient(135deg, #fef5e7 0%, #f9e7d0 100%);
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid #6b4423;
+    }
+    .hallazgo-card h3 {
+      color: #6b4423;
+      margin-top: 0;
+      font-size: 1.3em;
+    }
+    .info-practica {
+      background: #fef5e7;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .boton-volver {
+      display: inline-block;
+      background: #6b4423;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 20px 0;
+      transition: background 0.3s;
+    }
+    .boton-volver:hover {
+      background: #4a2f18;
+    }
+    .timeline {
+      background: #fef5e7;
+      padding: 30px;
+      border-radius: 15px;
+      border-left: 5px solid #6b4423;
+    }
+    .timeline-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #d4af37;
+    }
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+    .timeline-item h4 {
+      color: #6b4423;
+      margin: 0 0 10px 0;
+    }
+    .destacado-box {
+      background: linear-gradient(135deg, #d4af37 0%, #c49f2e 100%);
+      color: #4a2f18;
+      padding: 25px;
+      border-radius: 15px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1>Turismo Coclé</h1>
+  <nav id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="juego.html">Juego</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <div class="hamburguesa" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="detalle-hero">
+  <h1>🏛️ Parque Arqueológico El Caño</h1>
+  <p>Un viaje al pasado precolombino de Panamá</p>
+</div>
+
+<div class="detalle-contenido">
+  <a href="sitios.html" class="boton-volver">← Volver a Sitios</a>
+
+  <div class="seccion-info">
+    <h2>Descripción</h2>
+    <p>El Parque Arqueológico El Caño es uno de los sitios arqueológicos más importantes de Panamá y uno de los tesoros culturales de la provincia de Coclé. Este sitio ceremonial precolombino fue el centro de poder de una de las culturas más avanzadas que habitaron el istmo panameño entre los años 700 y 1500 d.C.</p>
+    <p>El parque preserva estructuras arqueológicas, tumbas de élite y petroglifos que revelan la sofisticación de las sociedades que poblaron esta región. Los hallazgos encontrados aquí, incluyendo ornamentos de oro, cerámica policromada y objetos rituales, demuestran la riqueza cultural y el poder político que concentraba este lugar sagrado.</p>
+    <p>Reconocido como Monumento Histórico Nacional, El Caño ofrece a los visitantes una ventana única para comprender las raíces precolombinas de Panamá y apreciar el legado de sus pueblos originarios.</p>
+  </div>
+
+  <div class="destacado-box">
+    <strong>💫 Descubrimiento Histórico:</strong> En 2010 se encontró una de las tumbas más ricas de toda Centroamérica, con más de 23 kilogramos de oro y piedras preciosas, evidenciando el poder de los caciques que gobernaban esta región.
+  </div>
+
+  <div class="seccion-info">
+    <h2>Historia del Sitio</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>700 - 1000 d.C. - Periodo Formativo</h4>
+        <p>Inicio de la ocupación del sitio. Se establecen las primeras estructuras ceremoniales y se consolida como un centro de poder regional.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>1000 - 1520 d.C. - Periodo Clásico</h4>
+        <p>Época de mayor esplendor. El Caño se convierte en el principal centro ceremonial y político de la región. Se construyen las estructuras más importantes y se realizan los entierros de élite.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>1520 - 1550 d.C. - Contacto Español</h4>
+        <p>Llegada de los conquistadores españoles. El sitio es gradualmente abandonado debido a la conquista y las enfermedades traídas por los europeos.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>1925 - Primeras Exploraciones</h4>
+        <p>Arqueólogos estadounidenses realizan las primeras excavaciones documentadas, revelando la importancia del sitio.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2005 - Actualidad</h4>
+        <p>Investigaciones modernas bajo la dirección de arqueólogos panameños. Descubrimientos espectaculares como la Tumba 32 (2010) con su extraordinario ajuar funerario.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Principales Hallazgos y Características</h2>
+    <div class="hallazgos-grid">
+      <div class="hallazgo-card">
+        <h3>👑 Tumbas de Élite</h3>
+        <p>Enterramientos de caciques y personajes de alto rango con ricos ajuares funerarios. La Tumba 32 contenía más de 23 kg de oro en ornamentos.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>🗿 Columnas de Basalto</h3>
+        <p>Impresionantes columnas monolíticas de basalto que delimitaban el área ceremonial. Algunas alcanzan hasta 5 metros de altura y pesan toneladas.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>🪨 Petroglifos</h3>
+        <p>Grabados en piedra con figuras antropomorfas, zoomorfas y geométricas. Representan deidades, animales sagrados y símbolos cosmológicos.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>✨ Ornamentos de Oro</h3>
+        <p>Pectorales, diademas, bezotes, narigueras y placas de oro trabajadas con técnicas sofisticadas como la cera perdida y el repujado.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>🏺 Cerámica Policromada</h3>
+        <p>Vasijas decoradas con diseños complejos en múltiples colores. Representan escenas mitológicas y de la vida cotidiana.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>📿 Cuentas de Piedra</h3>
+        <p>Miles de cuentas de cornalina, ágata, jade y otras piedras semipreciosas que formaban collares ceremoniales.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>🪓 Herramientas y Armas</h3>
+        <p>Hachas ceremoniales, puntas de lanza y herramientas de piedra pulida que muestran alto nivel técnico.</p>
+      </div>
+      <div class="hallazgo-card">
+        <h3>🦴 Restos Humanos</h3>
+        <p>Esqueletos bien preservados que permiten estudiar la salud, dieta y prácticas funerarias de estas culturas antiguas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion-info">
+    <h2>El Museo de Sitio</h2>
+    <p>El parque cuenta con un moderno museo de sitio que exhibe una selección de los hallazgos más importantes descubiertos en las excavaciones. El museo ofrece:</p>
+    <ul style="line-height: 1.8;">
+      <li>🏛️ <strong>Salas de Exposición:</strong> Vitrinas con objetos originales incluyendo oro, cerámica, piedras preciosas y herramientas</li>
+      <li>📱 <strong>Tecnología Interactiva:</strong> Pantallas táctiles y videos que explican la historia del sitio</li>
+      <li>🎨 <strong>Réplicas Didácticas:</strong> Reproducción de tumbas y contextos arqueológicos para mejor comprensión</li>
+      <li>📚 <strong>Material Educativo:</strong> Paneles informativos en español e inglés</li>
+      <li>❄️ <strong>Climatización:</strong> Espacios con aire acondicionado para preservar los objetos y comodidad de visitantes</li>
+      <li>♿ <strong>Accesibilidad:</strong> Instalaciones diseñadas para personas con movilidad reducida</li>
+    </ul>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Recorrido por el Parque</h2>
+    <p>El tour guiado por el parque incluye:</p>
+    <ul style="line-height: 1.8;">
+      <li>🚶 <strong>Área Ceremonial:</strong> Observa las columnas de basalto in situ y aprende sobre su significado</li>
+      <li>⛏️ <strong>Zonas de Excavación:</strong> Áreas donde se han realizado y continúan las investigaciones arqueológicas</li>
+      <li>🪨 <strong>Petroglifos:</strong> Visita a las rocas grabadas con arte rupestre precolombino</li>
+      <li>🏛️ <strong>Plataformas Ceremoniales:</strong> Estructuras donde se realizaban rituales y ceremonias importantes</li>
+      <li>🌳 <strong>Senderos Naturales:</strong> Caminos entre vegetación que conectan los diferentes sectores del parque</li>
+      <li>👥 <strong>Guías Especializados:</strong> Tours dirigidos por arqueólogos y guías capacitados</li>
+    </ul>
+    <p><strong>Duración del recorrido:</strong> 1.5 a 2 horas aproximadamente</p>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Información Práctica</h2>
+    <div class="info-practica">
+      <p><strong>📍 Ubicación:</strong> Distrito de Natá, provincia de Coclé. A 20 km de la ciudad de Penonomé</p>
+      <p><strong>🚗 Cómo llegar:</strong> Por la Carretera Interamericana hasta Natá, luego 5 km hacia el norte (aproximadamente 2 horas desde Ciudad de Panamá)</p>
+      <p><strong>⏰ Horario:</strong> Martes a Domingo de 9:00 AM a 4:00 PM (Cerrado los lunes)</p>
+      <p><strong>💵 Entrada:</strong> 
+        <br>• Nacionales: $5 adultos, $2 estudiantes con carnet, $2 adultos mayores
+        <br>• Extranjeros: $10 adultos, $5 estudiantes
+        <br>• Niños menores de 6 años: Gratis</p>
+      <p><strong>🎫 Tours Guiados:</strong> Incluidos en el precio de entrada. Disponibles en español e inglés</p>
+      <p><strong>📞 Contacto:</strong> +507 983-0114</p>
+      <p><strong>🌐 Web:</strong> Busca "Parque Arqueológico El Caño" en redes sociales para información actualizada</p>
+    </div>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Consejos para tu Visita</h2>
+    <ul style="line-height: 1.8;">
+      <li>⏰ Llega temprano para evitar el calor del mediodía</li>
+      <li>🧢 Usa sombrero, gafas de sol y protector solar</li>
+      <li>💧 Lleva agua suficiente para mantenerte hidratado</li>
+      <li>👟 Calzado cómodo para caminar (hay senderos de tierra)</li>
+      <li>📸 Se permite fotografía sin flash. No toques los objetos ni las estructuras</li>
+      <li>🎒 Mochilas pequeñas permitidas. Las grandes deben dejarse en consigna</li>
+      <li>👨‍👩‍👧‍👦 Excelente destino educativo para familias con niños</li>
+      <li>📚 Aprovecha los guías - su conocimiento enriquece enormemente la experiencia</li>
+      <li>🦟 Repelente de insectos recomendado</li>
+      <li>⚠️ Respeta las señalizaciones y no ingreses a áreas restringidas</li>
+    </ul>
+  </div>
+
+  <div class="seccion-info">
+    <h2>Importancia Cultural</h2>
+    <p>El Parque Arqueológico El Caño no es solo un sitio turístico, sino un patrimonio que conecta a los panameños con sus raíces precolombinas. Este lugar nos recuerda que antes de la llegada de los españoles, Panamá era hogar de sociedades complejas y avanzadas con:</p>
+    <ul style="line-height: 1.8;">
+      <li>⚖️ Sistemas políticos jerarquizados con caciques poderosos</li>
+      <li>🎨 Alto desarrollo artístico en orfebrería, cerámica y trabajo en piedra</li>
+      <li>🌾 Agricultura organizada y manejo de recursos naturales</li>
+      <li>🔄 Redes de intercambio comercial con otras regiones de América</li>
+      <li>🌟 Cosmovisión rica con complejas creencias religiosas y rituales</li>
+      <li>🏗️ Conocimientos de ingeniería para mover y colocar grandes piedras</li>
+    </ul>
+    <p>Visitar El Caño es una oportunidad para valorar y proteger este patrimonio invaluable para las futuras generaciones.</p>
+  </div>
+
+  <div class="destacado-box">
+    <strong>🎓 Importante:</strong> El parque continúa siendo objeto de investigación activa. Cada año se realizan nuevas excavaciones que siguen revelando secretos de nuestro pasado precolombino.
+  </div>
+
+  <a href="sitios.html" class="boton-volver">← Volver a Sitios</a>
+</div>
+
+<footer class="footer">
+  <div>
+    <h4>Enlaces</h4>
+    <a href="index.html">Inicio</a>
+    <a href="sitios.html">Sitios</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="sobre.html">Sobre Nosotros</a>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Email: info@turismococle.com</p>
+    <p>Tel: +507 6000-0000</p>
+    <a href="contacto.html">Formulario</a>
+  </div>
+  <div>
+    <h4>Redes Sociales</h4>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <h4>Ubicación</h4>
+    <p>Provincia de Coclé</p>
+    <p>República de Panamá</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

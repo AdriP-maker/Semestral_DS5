@@ -700,6 +700,35 @@ form button:hover {
   background: var(--verde-claro);
 }
 
+/* NUEVA SECCIÓN: OBJETIVO DEL PROYECTO */
+    .seccion-objetivo {
+      background-color: var(--verde-principal);
+      color: white;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 5px solid var(--verde-principal);
+    }
+
+    .contenido-objetivo {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contenido-objetivo h3 {
+      color: #ffcc00; /* Amarillo para resaltar */
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contenido-objetivo p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   #menu {
